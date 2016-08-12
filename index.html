@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rebekah Milford</title>
+	<meta name="description" content="A simple content slider with depth-like zoom functionality" />
+	<meta name="keywords" content="blueprint, template, slider, zoom, javascript, depth, 3d, css" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- Feather Icons -->
+	<link rel="stylesheet" type="text/css" href="fonts/feather/style.css">
+	<!-- General demo styles & header -->
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<!-- Component styles -->
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script src="js/modernizr.custom.js"></script>
+</head>
+<body>
+    <ul>
+      <div id="nav-icon3">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+<!--
+      <li><a href="#contact">ABOUT</a></li>
+-->
+      <li><a id="github" href="#about">CODING</a></li>
+      <li><a id="pintrest" href="#inspiration" >INSPIRATION</a></li>
+      <li><a id="photo" href="#photography">PHOTOGRAPHY</a></li>
+
+
+    </ul>
+
+	<!-- Main container -->
+	<div class="container">
+		<!-- Blueprint header -->
+		<header class="bp-header cf">
+			<h1>Hi, I'm Rebekah.  Thanks for stopping by!</h1>
+		</header>
+		<!-- Grid -->
+		<section class="slider">
+			<div class="slide slide--current" data-content="content-1">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<img class="zoomer__image" src="images/iphone.png" alt="iPhone frame" />
+						<div class="preview">
+							<img src="images/instagram-preview.png" alt="instagram app preview" />
+							<div class="zoomer__area zoomer__area--size-2"></div>
+						</div>
+					</div>
+				</div>
+				<h2 class="slide__title"><span>Photography</span>My Instagram</h2>
+			</div>
+			<div class="slide" data-content="content-2">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<img class="zoomer__image" src="images/ipad.png" alt="iPad frame" />
+						<div class="preview">
+							<img src="images/pinterest-preview.png" alt="Pintrest profile preview" />
+							<div class="zoomer__area zoomer__area--size-4"></div>
+						</div>
+					</div>
+				</div>
+				<h2 class="slide__title"><span>PInspirtion</span>My Design Inspiration</h2>
+			</div>
+			<div class="slide" data-content="content-3">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<img class="zoomer__image" src="images/macbook.png" alt="MacBook frame" />
+						<div class="preview">
+							<img src="images/github-preview.png" alt="Github profile preview" />
+							<div class="zoomer__area zoomer__area--size-3"></div>
+						</div>
+					</div>
+				</div>
+				<h2 class="slide__title"><span>Programming</span>My Code Snippets</h2>
+			</div>
+<!--			
+			<div class="slide" data-content="content-4">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<img class="zoomer__image" src="images/imac.png" alt="iMac" />
+						<div class="preview">
+							<img src="images/imac-content-preview.jpg" alt="iMac app preview" />
+							<div class="zoomer__area zoomer__area--size-5"></div>
+						</div>
+					</div>
+				</div>
+				<h2 class="slide__title"><span>The Glorious</span> iMac</h2>
+			</div>
+			<div class="slide" data-content="content-5">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<img class="zoomer__image" src="images/apple-watch.png" alt="Apple Watch" />
+						<div class="preview rounded">
+							<img src="images/apple-watch-content-preview.png" alt="Apple Watch app preview" />
+							<div class="zoomer__area zoomer__area--size-1"></div>
+						</div>
+					</div>
+				</div>
+				<h2 class="slide__title"><span>The Fabulous</span> Apple Watch</h2>
+			</div>
+-->
+			<nav class="slider__nav">
+				<button class="button button--nav-prev"><i class="icon icon--arrow-left"></i><span class="text-hidden">Previous product</span></button>
+				<button class="button button--zoom"><i class="icon icon--zoom"></i><span class="text-hidden">View details</span></button>
+				<button class="button button--nav-next"><i class="icon icon--arrow-right"></i><span class="text-hidden">Next product</span></button>
+			</nav>
+		</section>
+		<!-- /slider-->
+		<section class="content">
+			<div class="content__item" id="content-1">
+				<img class="content__item-img rounded-right" src="images/instagram.png" alt="Instagram Content" />
+				<div class="content__item-inner">
+					<h2>Instagram Photography</h2>
+					<h3>Beauty of Simple Moments from around the World</h3>
+					<div id="instafeed"></div>
+					<p><a target="_blank" href="https://www.instagram.com/rebekahmilford/">See My Instagram Photos &xrarr;</a></p>
+				</div>
+			</div>
+			<div class="content__item" id="content-2">
+				<img class="content__item-img rounded-right" src="images/pinterest-sample.png" alt="Pinterest Content" />
+				<div class="content__item-inner">
+					<h2>Pinterest Design Boards</h2>
+					<h3>Check out some of my Pinspirational Boards</h3>
+					<a data-pin-do="embedBoard" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" target="_blank"href="https://www.pinterest.com/rebekahmilford/design-inspiration/?etslf=7829&eq=desi"><img src="images/pinterest2.png" alt="Pintrest Design Board" /></a>
+					<a data-pin-do="embedBoard" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80"  target="_blank" href="https://www.pinterest.com/rebekahmilford/web-design-style-guide/"><img src="images/pinterest.png" alt="Pinterest Design Board" /></a>
+				</div>
+			</div>
+			<div class="content__item" id="content-3">
+				<img class="content__item-img rounded-right" src="images/github.png" alt="Github Content" />
+				<div class="content__item-inner">
+					<h2>Code Snippets</h2>
+					<h3>Front-end and Fullstack Code Samples</h3>
+					<p>... echo "Hello World"</p>
+					<p>... console.log 'Hello, world!'</p>
+					<p>... $("body").append("Hello world!");</p>
+					<p>... print "Hello, world!"</p>
+					<p>... puts "Hello, world!"</p>
+
+					<p><a target="_blank" href="https://github.com/rmilford">Check out my github &xrarr;</a></p>
+				</div>
+			</div>
+<!--			
+			<div class="content__item" id="content-4">
+				<img class="content__item-img rounded-right" src="images/imac-content.jpg" alt="iMac Content" />
+				<div class="content__item-inner">
+					<h2>The iMac</h2>
+					<h3>Engineered to the very last detail</h3>
+					<p>Every new Mac comes with Photos, iMovie, GarageBand, Pages, Numbers, and Keynote. So you can be creative with your photos, videos, music, documents, spreadsheets, and presentations right from the start. You also get great apps for email, surfing the web, sending texts, and making FaceTime calls — there’s even an app for finding new apps.</p>
+					<p><a href="https://www.apple.com/imac/built-in-apps/">Learn more about the iMac's features &xrarr;</a></p>
+				</div>
+			</div>
+			<div class="content__item" id="content-5">
+				<img class="content__item-img rounded-right" src="images/apple-watch-content.png" alt="Apple Watch Content" />
+				<div class="content__item-inner">
+					<h2>The Apple Watch</h2>
+					<h3>Entirely new ways to stay in touch</h3>
+					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch, or even your heartbeat. </p>
+					<p><a href="https://www.apple.com/watch/new-ways-to-connect/">Learn more about new ways to connect &xrarr;</a></p>
+				</div>
+			</div>
+-->			
+			<button class="button button--close"><i class="icon icon--circle-cross"></i><span class="text-hidden">Close content</span></button>
+		</section>
+	</div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+	<script type="text/javascript" src="js/instafeed.min.js"></script>
+<!--
+	<script src="js/subMain.js"></script>
+-->
+	<script src="js/classie.js"></script>
+	<script src="js/dynamics.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/sdk.js"></script>
+</body>
+</html>
