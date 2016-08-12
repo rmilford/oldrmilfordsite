@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #Blueprint: Zoom Slider
 
 A simple content slider with depth-like zoom functionality for a predefined area in each slide.
