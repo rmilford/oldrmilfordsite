@@ -94,6 +94,9 @@ window.onload = function() {
 		navRightCtrl = sliderEl.querySelector('.button--nav-next'),
 		navLeftCtrl = sliderEl.querySelector('.button--nav-prev'),
 		zoomCtrl = sliderEl.querySelector('.button--zoom'),
+		zoomImg0 = sliderEl.querySelector('#image0'),
+		zoomImg1 = sliderEl.querySelector('#image1'),
+		zoomImg2 = sliderEl.querySelector('#image2'),
 		// the main content element
 		contentEl = document.querySelector('.content'),
 		// close content control
@@ -131,6 +134,15 @@ window.onload = function() {
 		// open items
 		zoomCtrl.addEventListener('click', function() {
 			openItem(items[current]);
+		});
+		zoomImg0.addEventListener('click', function() {
+			openItem(items[0]);
+		});
+		zoomImg1.addEventListener('click', function() {
+			openItem(items[1]);
+		});
+		zoomImg2.addEventListener('click', function() {
+			openItem(items[2]);
 		});
 		var myPhotos = document.getElementById('photo');
 		myPhotos.addEventListener('click', function() {

@@ -2,6 +2,7 @@
 body {
     background-color: #000000;
     font-family: "Avenir", 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+
 }
 
 ul {
@@ -80,7 +81,7 @@ a img {
   display: block;
   position: absolute;
   height: 5px;
-  width: 90%;
+  width: 100%;
   background: #ffffff;
   border-radius: 8px;
   opacity: 1;
@@ -100,15 +101,15 @@ a img {
 }
 
 #nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
-  top: 18px;
+  top: 15px;
 }
 
 #nav-icon3 span:nth-child(4) {
-  top: 36px;
+  top: 30px;
 }
 
 #nav-icon3.open span:nth-child(1) {
-  top: 18px;
+  top: 15px;
   width: 0%;
   left: 50%;
 }
@@ -128,14 +129,17 @@ a img {
 }
 
 #nav-icon3.open span:nth-child(4) {
-  top: 18px;
+  top: 15px;
   width: 0%;
   left: 50%;
 }
 
 /*phone*/
-@media (min-width: 320px) and (max-width: 736px) {
-
+@media (min-width: 300px) and (max-width: 736px) {
+li a {
+  font-size: .8em !important;
+  padding: 0 0 !important;
+}
 
 }
 /*tablet*/

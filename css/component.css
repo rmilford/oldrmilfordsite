@@ -23,7 +23,7 @@ body {
 	z-index: 200;
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 0 7em;
+	padding: 0 0 4em;
 	text-align: center;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -57,7 +57,7 @@ body {
 	font-size: 1.75em;
 	font-weight: normal;
 	margin: 0 auto;
-	padding: 1em 0 0 0;
+	padding: 0 0 0 0;
 }
 
 .slide__title span {
@@ -414,10 +414,19 @@ body {
 		max-height: 70vh;
 	}
 	.content h2 {
-		font-size: 3em;
+		font-size: 2.5em;
 	}
 	.content__item-inner {
 		font-size: 82%;
 		padding: 4em 3em 2em;
 	}
+
+	.slide__title {
+		padding-top: 0 !important;
+		font-size: 1.5em;
+	}
+	section.slider {
+		padding-bottom: 4em;
+	}
+
 }
