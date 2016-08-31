@@ -134,16 +134,73 @@ a img {
   left: 50%;
 }
 
+.button--nav-prev {
+  margin-right: 9em;
+}
+
+.button--nav-next {
+  margin-left: 9em;
+}
+/*
+.button--nav-next {
+  margin-left: 9em;
+}
+*/
+@-webkit-keyframes blinker {
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+
+.waitingForConnection {
+  -webkit-animation-name: blinker;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(.5, 0, 1, 1);
+  -webkit-animation-duration: 1.8s;
+}
+
+.blink_me {
+  animation: blinker 1.8s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0.0; }
+}
+
+nav {
+  height: 10em;
+}
+nav.slider_zoom{
+  padding-top: .5em;
+}
 /*phone*/
 @media (min-width: 300px) and (max-width: 736px) {
 li a {
   font-size: .8em !important;
   padding: 0 0 !important;
 }
+.button--nav-prev {
+  margin-right: 4em;
+}
+.button--nav-next {
+  margin-left: 4em;
+}
+
+.button--zoom {
+  visibility: hidden;
+}
+nav.slider_zoom{
+  visibility: hidden;
+}
 
 }
 /*tablet*/
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 736px) and (max-width: 1280px) {
+  .button--zoom {
+    visibility: hidden;
+  }
+  nav.slider_zoom{
+    visibility: hidden;
+  }
 
 
 }

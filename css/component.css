@@ -13,11 +13,11 @@ body {
 	height: 100%;
 	-webkit-overflow-scrolling: touch;
 }
-
+/*
 .noscroll .container {
 	overflow-y: hidden;
 }
-
+*/
 .slider {
 	position: relative;
 	z-index: 200;
@@ -71,9 +71,10 @@ body {
 
 .slider__nav {
 	position: absolute;
-	bottom: 2em;
+	bottom: 16em;
 	width: 100%;
 	text-align: center;
+	z-index: 100;
 }
 
 .button {
@@ -419,6 +420,10 @@ body {
 	.content__item-inner {
 		font-size: 82%;
 		padding: 4em 3em 2em;
+	}
+	.slider__nav {
+		position: absolute;
+		bottom: 8em;
 	}
 
 	.slide__title {
