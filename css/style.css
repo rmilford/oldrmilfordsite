@@ -54,7 +54,10 @@ a img {
   vertical-align: middle;
   padding: 10px;
 }
-
+/*brandStatement*/
+#brandStatement{
+font-size: 
+}
 /* Icon 1 */
 
 #nav-icon3 {
@@ -75,6 +78,7 @@ a img {
   margin-top: 7px;
   margin-right: 15px;
   margin-left: 10px;
+
 }
 
 #nav-icon3 span {
@@ -82,7 +86,7 @@ a img {
   position: absolute;
   height: 5px;
   width: 100%;
-  background: #ffffff;
+  background: #5C5EDC;
   border-radius: 8px;
   opacity: 1;
   left: 0;

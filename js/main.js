@@ -4,7 +4,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2015, Codrops
  * http://www.codrops.com
  */
@@ -59,7 +59,7 @@ window.onload = function() {
 
 
 
-	var bodyEl = document.body, 
+	var bodyEl = document.body,
 		docElem = window.document.documentElement,
 		support = { transitions: Modernizr.csstransitions },
 		// transition end event name
@@ -97,6 +97,7 @@ window.onload = function() {
 		zoomImg0 = sliderEl.querySelector('#image0'),
 		zoomImg1 = sliderEl.querySelector('#image1'),
 		zoomImg2 = sliderEl.querySelector('#image2'),
+    zoomImg3 = sliderEl.querySelector('#image3'),
 		// the main content element
 		contentEl = document.querySelector('.content'),
 		// close content control
@@ -144,6 +145,10 @@ window.onload = function() {
 		zoomImg2.addEventListener('click', function() {
 			openItem(items[2]);
 		});
+    zoomImg3.addEventListener('click', function() {
+			openItem(items[3]);
+		});
+
 		var myPhotos = document.getElementById('photo');
 		myPhotos.addEventListener('click', function() {
 			openItem(items[0]);
@@ -154,11 +159,16 @@ window.onload = function() {
 			openItem(items[1]);
 		});
 
-
 		var myGithub = document.getElementById('github');
 		myGithub.addEventListener('click', function() {
 			openItem(items[2]);
 		});
+
+    var myContact = document.getElementById('contact');
+		myContact.addEventListener('click', function() {
+			openItem(items[3]);
+		});
+
 
 		// close content
 		closeContentCtrl.addEventListener('click', closeContent);
@@ -182,7 +192,7 @@ window.onload = function() {
 
 		// keyboard navigation events
 		document.addEventListener( 'keydown', function( ev ) {
-			if( isOpen ) return; 
+			if( isOpen ) return;
 			var keyCode = ev.keyCode || ev.which;
 			switch (keyCode) {
 				case 37:
@@ -218,7 +228,7 @@ window.onload = function() {
 			if( bodyScale ) {
 				dynamics.stop(bodyEl);
 				dynamics.css(bodyEl, { scale: 1 });
-				
+
 				// fix for safari (allowing fixed children to keep position)
 				bodyEl.style.WebkitTransform = 'none';
 				bodyEl.style.transform = 'none';
@@ -246,7 +256,7 @@ window.onload = function() {
 		classie.remove(contentEl, 'content--open');
 		classie.remove(contentItem, 'content__item--current');
 		classie.remove(bodyEl, 'noscroll');
-				
+
 		if( bodyScale ) {
 			// reset fix for safari (allowing fixed children to keep position)
 			bodyEl.style.WebkitTransform = '';
@@ -261,7 +271,7 @@ window.onload = function() {
 		// wait for the inner content to finish the transition
 		onEndTransition(contentItem, function(ev) {
 			classie.remove(this, 'content__item--reset');
-			
+
 			// reset scrolling permission
 			lockScroll = false;
 			scrollContainer.removeEventListener('scroll', noscroll);
@@ -270,12 +280,12 @@ window.onload = function() {
 			zoomer.style.WebkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)';
 			zoomer.style.transform = 'translate3d(0,0,0) scale3d(1,1,1)';
 			/* fix for safari flickering */
-			
+
 			// scale up - behind the scenes - the item again (without transition)
 			applyTransforms(zoomer);
-			
+
 			// animate/scale down the item
-			setTimeout(function() {	
+			setTimeout(function() {
 				classie.remove(zoomer, 'zoomer--notrans');
 				classie.remove(zoomer, 'zoomer--active');
 				zoomer.style.WebkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)';
@@ -297,13 +307,13 @@ window.onload = function() {
 	// applies the necessary transform value to scale the item up
 	function applyTransforms(el, nobodyscale) {
 		// zoomer area and scale value
-		var zoomerArea = el.querySelector('.zoomer__area'), 
+		var zoomerArea = el.querySelector('.zoomer__area'),
 			zoomerAreaSize = {width: zoomerArea.offsetWidth, height: zoomerArea.offsetHeight},
 			zoomerOffset = zoomerArea.getBoundingClientRect(),
 			scaleVal = zoomerAreaSize.width/zoomerAreaSize.height < win.width/win.height ? win.width/zoomerAreaSize.width : win.height/zoomerAreaSize.height;
 
 		if( bodyScale && !nobodyscale ) {
-			scaleVal /= bodyScale; 
+			scaleVal /= bodyScale;
 		}
 
 		// apply transform
@@ -328,7 +338,7 @@ window.onload = function() {
 		var itemNext = items[current],
 			nextEl = itemNext.querySelector('.slide__mover'),
 			nextTitleEl = itemNext.querySelector('.slide__title');
-		
+
 		// animate the current element out
 		dynamics.animate(currentEl, { opacity: 0, translateX: dir === 'right' ? -1*currentEl.offsetWidth/2 : currentEl.offsetWidth/2, rotateZ: dir === 'right' ? -10 : 10 }, {
 			type: dynamics.spring,
