@@ -73,7 +73,7 @@ a:hover {
 /* Blueprint header */
 .bp-header {
 	margin: 0 auto;
-	padding: 3em 3em 0;
+	padding: 0em 3em 0;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;

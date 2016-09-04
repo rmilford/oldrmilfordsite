@@ -98,6 +98,7 @@ window.onload = function() {
 		zoomImg1 = sliderEl.querySelector('#image1'),
 		zoomImg2 = sliderEl.querySelector('#image2'),
     zoomImg3 = sliderEl.querySelector('#image3'),
+    zoomImg4 = sliderEl.querySelector('#image4'),
 		// the main content element
 		contentEl = document.querySelector('.content'),
 		// close content control
@@ -148,27 +149,34 @@ window.onload = function() {
     zoomImg3.addEventListener('click', function() {
 			openItem(items[3]);
 		});
+    zoomImg4.addEventListener('click', function() {
+			openItem(items[4]);
+		});
 
 		var myPhotos = document.getElementById('photo');
 		myPhotos.addEventListener('click', function() {
-			openItem(items[0]);
+			openItem(items[3]);
 		});
 
 		var myPintrest = document.getElementById('pintrest');
 		myPintrest.addEventListener('click', function() {
-			openItem(items[1]);
+			openItem(items[2]);
 		});
 
 		var myGithub = document.getElementById('github');
 		myGithub.addEventListener('click', function() {
-			openItem(items[2]);
+			openItem(items[1]);
 		});
 
     var myContact = document.getElementById('contact');
 		myContact.addEventListener('click', function() {
-			openItem(items[3]);
+			openItem(items[4]);
 		});
 
+    var aboutMe = document.getElementById('about');
+		aboutMe.addEventListener('click', function() {
+			openItem(items[0]);
+		});
 
 		// close content
 		closeContentCtrl.addEventListener('click', closeContent);
