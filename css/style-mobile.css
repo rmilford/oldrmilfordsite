@@ -1,0 +1,210 @@
+* {
+  max-width: 100%;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+body {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    max-width: 100%
+}
+.pnw {
+  z-index: -1;
+}
+.nav {
+    background-color: #333;
+    overflow: hidden;
+    height: 7em;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 2;
+}
+
+.nav a {
+  visibility: invisible;
+}
+
+.nav.responsive a {
+  color:#FFFFFF;
+  text-decoration: none;
+  font-size: 2.5em;
+  visibility: visible;
+  animation-name: openNavBar;
+  animation-duration: 1s;
+}
+
+.nav.responsive a.icon {
+  font-size: 5em;
+}
+.icon {
+  float: right;
+  display: block;
+  color:#FFFFFF;
+  text-decoration: none;
+  font-size: 5em;
+  height: 2em;
+  width: 1.5em;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+}
+
+.welcome{
+    display: block;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    max-width: 70%;
+    top: 0%;
+    margin:auto;
+    margin-top: 12em;
+    border: 0px;
+    padding: 0px;
+    visibility: visible;
+    position: absolute;
+    z-index: 1;
+}
+
+.about{
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  /*margin-right: -50%;*/
+  width: 15%;
+  height: 18%;
+  visibility: hidden;
+}
+
+.work{
+  position: absolute;
+  top: 25%;
+  left: 23%;
+  /*margin-right: -50%;*/
+  width: 15%;
+  height: 18%;
+  visibility: hidden;
+}
+.initials{
+  /*display: block;*/
+  position: absolute;
+  top: 5%;
+  left: 42%;
+  z-index: 1;
+  max-width: 15%;
+  /*top: 5%;*/
+  margin:auto;
+  visibility: hidden;
+}
+.personal{
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  width: 15%;
+  height: 18%;
+  visibility: hidden;
+}
+.contact{
+  position: absolute;
+  top: 25%;
+  left: 65%;
+  width: 15%;
+  height: 18%;
+  visibility: hidden;
+}
+
+
+.wrappper{
+  position: relative;
+  padding-top: 3em;
+  padding-bottom: 3em;
+    /*top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);*/
+
+}
+
+.hipster{
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1em;
+  font-size: 1em;
+  font-family: 'Raleway', serif;
+  margin: 1em 1em 1em 1em;
+  padding: 1em 1em 1em 1em;
+  display: block;
+}
+.digitaldesign{
+  position: relative;
+  /*top: 50em;*/
+  display: block;
+  /*left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)*/
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+.hipsterTwo{
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  top: 65em;
+  line-height: 90px;
+  font-size: 60px;
+  font-family: 'Raleway', serif;
+  margin: 150px 150px 150px 150px;
+  padding: 150px 150px 150px 150px;
+}
+
+.mountain {
+  position: relative;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  z-index: -1;
+
+}
+
+.digitaldesign {
+  z-index: -1;
+}
+
+.communications{
+  position: relative;
+  z-index: -1;
+
+  /*top: 350em;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)*/
+}
+
+.footerImage {
+  margin: 2.6em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  width: 15%;
+}
+
+footer{
+  /*position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;*/
+  display: inline-block;
+  margin: auto;
+  margin-top: 3em;
+  width: 100%;
+  height: 10em;
+  background-color: #1E1E1E;
+}
+
+@keyframes openNavBar {
+  from {opacity: 0}
+  to {opacity: 1}
+}
