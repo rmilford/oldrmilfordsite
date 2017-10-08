@@ -241,7 +241,7 @@ video.video-slide {
     float: right;
     padding-right: 10px;
     padding-top: 100px;
-    font-size: 30px;
+    font-size: 100px;
 }
 
 .closemodalbtn:hover, .closemodalbtn:focus {
