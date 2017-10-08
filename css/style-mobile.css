@@ -74,7 +74,7 @@ body {
 .about{
   position: absolute;
   top: 25%;
-  left: 5%;
+  left: 15%;
   /*margin-right: -50%;*/
   width: 15%;
   height: 18%;
@@ -84,7 +84,7 @@ body {
 .work{
   position: absolute;
   top: 25%;
-  left: 23%;
+  left: 40%;
   /*margin-right: -50%;*/
   width: 15%;
   height: 18%;
@@ -129,25 +129,147 @@ body {
 
 }
 
-.hipster{
-  text-align: center;
-  vertical-align: middle;
-  line-height: 1em;
-  font-size: 1em;
+
+div .heading, div .subheading, div p {
   font-family: 'Raleway', serif;
-  margin: 1em 1em 1em 1em;
-  padding: 1em 1em 1em 1em;
-  display: block;
+  padding-left: 50px;
+  padding-right: 50px;
 }
-.digitaldesign{
+
+div .heading {
+  font-weight: bolder;
+  font-size: 3em;
+  padding-top: 1.5em;
+  text-align: center;
+}
+
+div .subheading {
+  font-weight: bold;
+  font-size: 2em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  text-align: center;
+}
+
+div p {
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-top: .3em;
+  padding-bottom: .3em;
+}
+
+div p:last-child {
+  padding-bottom: 1.5em;
+}
+
+#work-wrapper {
+  width: 100%;
+}
+
+.preview {
+  float: left;
+  /*height: 200px;*/
+  width: 20%;
+  margin: 2% ;
+  background-color: #ddd;
+}
+
+.preview:hover {
+  background-color: #333;
+  box-shadow: 3px 3px 5px 6px #000;
+}
+
+.previewfooter {
+  font-family: 'Raleway', serif;
+  font-weight: bold;
+  font-size: 1em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  text-align: center;
+}
+
+video.video-slide {
+  display: block; !important
+  width:480px;
+  height:360px;
+  margin: 10px auto;
+  padding: auto;
+}
+
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation-name: modalOpen;
+  animation-duration: 1.5s;
+}
+
+#modalcontent {
+  background-color: #f4f4f4;
+  /*margin: 10% auto;*/
+  /*margin-bottom: 0px;*/
+  margin: 30% auto 0 auto;
+  padding: 20px;
+  width: 70%;
+  box-shadow: 0 5px 8px 0 rgb(0,0,0,0.2), 0 7px 20px rgba(0, 0, 0, 0.17);
+}
+
+#modalfooter {
   position: relative;
-  /*top: 50em;*/
+  background-color: #000;
+  margin: 0% auto;
+  border-top: 5px;
+  padding: 20px;
+  width: 70%;
+  /*box-shadow: 0 5px 8px 0 rgb(0,0,0,0.2), 0 7px 20px rgba(0, 0, 0, 0.17);  */
+}
+
+.w3-display-bottommiddle {
+  width: 60%;
+}
+.closemodalbtn {
+    color: #ccc;
+    float: right;
+    padding-right: 10px;
+    font-size: 30px;
+}
+
+.closemodalbtn:hover, .closemodalbtn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor:pointer;
+}
+.shadow {
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.digital-design-text {
+  position: absolute;
   display: block;
-  /*left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%)*/
   padding-top: 3em;
   padding-bottom: 3em;
+  max-width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 8%;
+  z-index: 1;
+}
+
+.digitaldesign{
+  position: relative;
+  display: block;
+  padding-top: 3em;
+  /*padding-bottom: 3em;*/
+  z-index: -1;
 }
 .hipsterTwo{
   position: relative;
@@ -169,9 +291,6 @@ body {
 
 }
 
-.digitaldesign {
-  z-index: -1;
-}
 
 .communications{
   position: relative;
