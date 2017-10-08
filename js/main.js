@@ -22,8 +22,7 @@ function openModal(e){
             'i');
 
   if (testExp.test(navigator.userAgent)) {
-    modalSize = '70%';
-    alert('Small Browser Detected')
+    modalSize = '60%';
   }
   var clickedClass = e.srcElement.className.split(' ')[2];
   if (clickedClass == 'stillView') {
