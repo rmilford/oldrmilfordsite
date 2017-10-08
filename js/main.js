@@ -16,8 +16,17 @@ function openModal(e){
   myIndex=0;
   modal.style.display='block';
   var modalSize = '36%';
-  console.log(window.innerWidth,window.innerHeight,'800','600');
-  if(window.innerWidth <= 1000 && window.innerHeight <= 1000) {
+  alert(window.innerWidth + ', ' + window.innerHeight+', 800,'+' 600');
+  testExp = new RegExp('Android|webOS|iPhone|iPad|' +
+             'BlackBerry|Windows Phone|'  +
+             'Opera Mini|IEMobile|Mobile' ,
+            'i');
+
+  if (testExp.test(navigator.userAgent)) {
+    alert('Howdy!');
+  }
+  if(window.innerWidth <= 800 || window.innerHeight <= 600) {
+    alert('Howdy!');
     modalSize = '70%';
   }
   var clickedClass = e.srcElement.className.split(' ')[2];
