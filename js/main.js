@@ -16,9 +16,9 @@ function openModal(e){
   myIndex=0;
   modal.style.display='block';
   var modalSize = '36%';
-  if(window.innerWidth <= 800 || window.innerHeight <= 600) {
+  console.log(window.innerWidth,window.innerHeight,'800','600');
+  if(window.innerWidth <= 1000 && window.innerHeight <= 1000) {
     modalSize = '70%';
-    console.log(window.innerWidth,window.innerHeight,'800','600');
   }
   var clickedClass = e.srcElement.className.split(' ')[2];
   if (clickedClass == 'stillView') {
