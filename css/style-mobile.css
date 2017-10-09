@@ -156,6 +156,7 @@ div p {
   font-size: 3em;
   padding-top: .3em;
   padding-bottom: .3em;
+  text-align: justify;
 }
 
 div p:last-child {
@@ -163,14 +164,31 @@ div p:last-child {
 }
 
 #work-wrapper {
+  /*width: 100%;*/
+}
+
+#rowOne {
+  position: relative;
   width: 100%;
+  height: 500px;
+  padding-top: 50px;
+  /*background-color: #ccc;*/
+}
+
+#rowTwo {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  padding-top: 50px;
+  /*background-color: #ccc;*/
 }
 
 .preview {
   float: left;
   /*height: 200px;*/
-  width: 20%;
-  margin: 2% ;
+  width: 40%;
+  margin-left: 6%;
+  margin-top: 5%
   background-color: #ddd;
 }
 
@@ -182,7 +200,7 @@ div p:last-child {
 .previewfooter {
   font-family: 'Raleway', serif;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 2em;
   padding-top: .5em;
   padding-bottom: .5em;
   text-align: center;
